@@ -28,16 +28,28 @@ npx create-react-app name_of_your_app
 this will load all the basic files required for creating react application Inside the folder name_of_your_app.
 side note : npx means related to executing , npm means realted to managing hence an 'm'
 
+need to write this for starting out with you new app
 ```
 cd name_of_your_app
 npm start
 ```
-need to write this 
+ 
+some commands to be remembered
 ```
 npm start #starts development server
 npm run build # bundles app files for production
 npm test #starts the test runner
 ```
 
+**understanding this create-react-app code structure**
+you have 3 folders in total
+1) node_modules : you skip this out when uploading your project on github , .gitignore helps you with it.
+2) public : contains your index.html , inside index .html you have a div element with id="root" , this is where all your react code will be poured.
+3) src : this is where all your react code is present
+4) inside scr you have index.js file where all the react code is present , directly or indirectly(thru components).
+package.json file contains info about package dependencies and other dependencies.
+```
+now , how react works is that although you don't have a single line of code in index.html but react.js converts all the code written in scr to bundle.js and when index.html runs on browser it gets the code from bundle.js
+```
 
 
