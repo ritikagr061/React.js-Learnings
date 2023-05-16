@@ -84,4 +84,39 @@ React uses a process called reconciliation to determine how to update the view e
 Think of state in React as a container that holds important information for a component. It's like a box that can store data and values that might change over time.
 
 **<needs to be updated **
- 
+
+**what are props**
+props are shorthand for properties , these are immutable in nature and can't be changed.
+
+**what is JSX**
+JSX (JavaScript XML) is a syntax extension used in React that allows you to write HTML-like code within JavaScript.
+```
+const name = "John";
+const element = <h1>Hello, {name}!</h1>;
+```
+
+There are some rules related to javascript.<br>
+
+When writing JSX in React, there are a few rules to keep in mind to ensure that your code is valid and properly interpreted by the React compiler. Here are three important rules for writing JSX:
+
+1. Use Proper Tag Closure:
+   Every JSX element must be properly closed, either with a closing tag or a self-closing tag. For example, `<div>Hello</div>` is a properly closed `<div>` element, while `<input />` is a self-closing `<input>` element. Make sure to include the closing slash in self-closing tags.
+
+2. Use JavaScript Expressions in Curly Braces:
+   To embed JavaScript expressions or variables within JSX, enclose them in curly braces `{}`. For example, `<h1>Hello, {name}!</h1>` allows you to insert the value of the `name` variable into the JSX output. You can include any valid JavaScript expression within the curly braces.
+
+3. Use a Single Root Element:
+   JSX expressions must have a single root element. This means that you should wrap multiple elements within a single parent element. For example, instead of writing:
+   ```jsx
+   <h1>Hello</h1>
+   <p>Paragraph</p>
+   ```
+   You should wrap them in a parent element like this:
+   ```jsx
+   <div>
+     <h1>Hello</h1>
+     <p>Paragraph</p>
+   </div>
+   ```
+   If you don't want to introduce an additional parent element, you can use a fragment (`<>...</>`) or React.Fragment to wrap the elements without adding a new DOM node.
+
