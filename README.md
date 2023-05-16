@@ -79,5 +79,9 @@ Technically , Rendering in React refers to the process of generating a view of a
 
 React uses a process called reconciliation to determine how to update the view efficiently. It compares the current state of the component hierarchy with the previous state, and determines which parts of the DOM need to be updated to reflect any changes.
 
+**what are states in react**
 
+Think of state in React as a container that holds important information for a component. It's like a box that can store data and values that might change over time.
 
+**<needs to be updated **
+ 
