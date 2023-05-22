@@ -119,4 +119,16 @@ When writing JSX in React, there are a few rules to keep in mind to ensure that 
    </div>
    ```
    If you don't want to introduce an additional parent element, you can use a fragment (`<>...</>`) or React.Fragment to wrap the elements without adding a new DOM node.
+   
+   
+**props in react**<br>
+
+when you want to pass information from one component to other we use props , you can pass the info as parameters example:
+
+<Header text1="dash dash" text2="blah blah" />
+here the react functional component will have 2 props , which u can access by props.text1 , props.text2.
+
+note: when you have dynamic value then don't pass the value as it is instead use {} so for example <Header tasklist={task} />
+
+
 
