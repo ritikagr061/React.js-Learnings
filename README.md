@@ -153,14 +153,14 @@ json-server --watch db.json --port 3004
 
 <br>
 note: do not do this as this will be an infinite loop (setProduct is a state change func)
-![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/a66e5a81-e26c-488c-8c22-49901c8561d7)
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/3640cd10-bf70-4a3e-8d53-7e7f43f6dfb8)
 
 <br>
 if you want to make it run once , you need to use useEffect because it runs only once or when a state changes.
 
 **UseEffect**
 
-<br>
 useEffect runs once when passed [] empty array as second argument , and will be called when [dependency] state is changed .
 
 ReactStrict mode : when in development phase we use ReactStrict mode which renders every element twice hence when in production remove the strict mode of react.
