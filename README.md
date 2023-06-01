@@ -132,3 +132,10 @@ note: when you have dynamic value then don't pass the value as it is instead use
 
 
 
+**JSON-Server(used for testing application with help of json server , which acts as fake api and outputs json file**
+<br>
+read how to use it , by going thru readme file.<br>
+https://github.com/typicode/json-server
+<br>
+to install it globally:<br>
+```npm install -g json-server```
