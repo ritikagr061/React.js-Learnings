@@ -145,13 +145,14 @@ to install it globally:<br>
 
 
 use this command to change the port as default port is 3000 which react also uses hence would give error.<br>
-```$ json-server --watch db.json --port 3004
+```
+json-server --watch db.json --port 3004
 ```
 
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/f0554b92-e517-4491-88e6-936c77cfed99)
 
 <br>
-note: do not do this as this will be an infinite loop (setProduct is a state change func)--> <br>
+note: do not do this as this will be an infinite loop (setProduct is a state change func)
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/a66e5a81-e26c-488c-8c22-49901c8561d7)
 
 <br>
