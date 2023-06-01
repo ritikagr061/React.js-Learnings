@@ -158,11 +158,12 @@ note: do not do this as this will be an infinite loop (setProduct is a state cha
 
 <br>
 if you want to make it run once , you need to use useEffect because it runs only once or when a state changes.
-
+<br>
 **UseEffect**
 
 useEffect runs once when passed [] empty array as second argument , and will be called when [dependency] state is changed .
 
 ReactStrict mode : when in development phase we use ReactStrict mode which renders every element twice hence when in production remove the strict mode of react.
 <br>
+
 
