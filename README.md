@@ -133,9 +133,35 @@ note: when you have dynamic value then don't pass the value as it is instead use
 
 
 **JSON-Server(used for testing application with help of json server , which acts as fake api and outputs json file**
+
+
 <br>
 read how to use it , by going thru readme file.<br>
+
 https://github.com/typicode/json-server
 <br>
 to install it globally:<br>
 ```npm install -g json-server```
+
+
+use this command to change the port as default port is 3000 which react also uses hence would give error.<br>
+```$ json-server --watch db.json --port 3004
+```
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/f0554b92-e517-4491-88e6-936c77cfed99)
+
+<br>
+note: do not do this as this will be an infinite loop (setProduct is a state change func)--> <br>
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/a66e5a81-e26c-488c-8c22-49901c8561d7)
+
+<br>
+if you want to make it run once , you need to use useEffect because it runs only once or when a state changes.
+
+**UseEffect**
+
+<br>
+useEffect runs once when passed [] empty array as second argument , and will be called when [dependency] state is changed .
+
+ReactStrict mode : when in development phase we use ReactStrict mode which renders every element twice hence when in production remove the strict mode of react.
+<br>
+
