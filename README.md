@@ -130,6 +130,38 @@ here the react functional component will have 2 props , which u can access by pr
 
 note: when you have dynamic value then don't pass the value as it is instead use {} so for example <Header tasklist={task} />
 
+### User Input , Events and UseRef
+
+side note: when you write html code inside javascript you mostly write arr.map(()=>( <p> ... </p> ) ) basically ()=>() instead of ()=>{} , you can write ()=> {} but here you would have to write ()=>{return( html_code )} .<br>
+
+this is what we want to create
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/07f29a16-91ef-441c-bf0b-1d5eb5283293)
+
+
+remember : event.target.value
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/b54e417c-0af9-4c3e-8303-7561e4ec9e30)
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/4214a69d-5a1f-4de0-8e28-3ab4045b0093)
+
+notice onClick (can be used for button as well as elements) , onChange(used for input fields mostly)<br>
+now after reseting the taskValue , although the taskValue state would have changed but it won't be reflected in the input field for that write `<input value={taskValue} ...>`
+<br>
+ 
+lets add one more field <br>
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/fd71a896-87b4-45cc-81fe-e1c28e858eea)
+
+**handling Submit button**
+
+handling submit button is a bit tricky as it redirects to GET url for example : localhost://3000?task=abc etc.<br>
+so for no page redirection write : event.preventDefault();
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/353494a2-56e0-4c5b-8ae8-14702d9723e2)
+
+
+so this is what we are returning :
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/9307715e-f780-474e-be82-8b1f9283a9a3)
 
 
 **JSON-Server(used for testing application with help of json server , which acts as fake api and outputs json file**
@@ -159,6 +191,7 @@ note: do not do this as this will be an infinite loop (setProduct is a state cha
 <br>
 if you want to make it run once , you need to use useEffect because it runs only once or when a state changes.
 <br>
+
 **UseEffect**
 
 useEffect runs once when passed [] empty array as second argument , and will be called when [dependency] state is changed .
