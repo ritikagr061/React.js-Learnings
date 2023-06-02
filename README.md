@@ -132,7 +132,7 @@ note: when you have dynamic value then don't pass the value as it is instead use
 
 ### User Input , Events and UseRef
 
-side note: when you write html code inside javascript you mostly write arr.map(()=>( <p> ... </p> ) ) basically ()=>() instead of ()=>{} , you can write ()=> {} but here you would have to write ()=>{return( html_code )} .<br>
+side note: when you write html code inside javascript you mostly write arr.map(()=>( <p>  </p> ) ) basically ()=>() instead of ()=>{} , you can write ()=> {} but here you would have to write ()=>{return( html_code )} .<br>
 
 this is what we want to create
 
@@ -163,7 +163,34 @@ so for no page redirection write : event.preventDefault();
 so this is what we are returning :
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/54e89224-2271-4420-b071-e8d0be41c375)
 
+### UseRef Hook
 
+So , total 2 things:<br>
+i)its just like useState but in useState the whole component re-renders after state changes but this doesn't happen with useRef.<br>
+ii) used to access DOM elements directly so instead of using getElementbyId etc. you can simply use this as well , just need to use ref={useRefObjectName};<br>
+<br>
+also in first point note that its not like you won't see updated value of useRef object , so whenever redering happens due to lets say change of some different state then while the rerendering , you would see updated value of useRef object. useRef object has a property current that stores the value.<br>
+
+DOM manupulation example:
+```
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+    console.log(inputRef.current.value);
+  }
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={handleClick}>
+        Focus the input
+      </button>
+    </>
+  );
+  ```
+  
+  
 
 **JSON-Server(used for testing application with help of json server , which acts as fake api and outputs json file**
 
