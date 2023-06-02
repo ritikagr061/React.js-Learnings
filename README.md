@@ -228,3 +228,27 @@ ReactStrict mode : when in development phase we use ReactStrict mode which rende
 <br>
 
 
+
+
+## React Router
+
+you need to import {browserRouter} from react-router-dom library , and close this around <App/> , this needs to be done in index.js
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/c3b1651f-819a-4d11-920b-6c17e86c9273)
+
+
+then to create routes you need to import {routes,route} and do this in app.js :
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/701b5015-3611-4f6a-b3e1-add9c17c8f48)
+
+
+**Difference between a tag , link , navlink**
+a tag will simply open a new page , hence full page will get refreshed instead use link or navlink tags from react-router library<br>
+
+note that the difference between navlink and react is that navlink adds active class to the link that matches with the selected link , so for example if selected link= /products then the links that matches this are / and /products so both of them will have class = active too , but if you want exact match then write 'end' at the end. Also you need to define .active css property in css file other wise no visual changes would be there.
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/d1078f98-2be2-4ade-b2e8-bd5b57b206d6)
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/074d6bad-4b6e-40ad-bff1-beb7c7947d49)
+
+notice instead of href we are using to='/products'
+
+
