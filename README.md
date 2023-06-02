@@ -240,8 +240,9 @@ then to create routes you need to import {routes,route} and do this in app.js :
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/701b5015-3611-4f6a-b3e1-add9c17c8f48)
 
 
-**Difference between a tag , link , navlink**
-a tag will simply open a new page , hence full page will get refreshed instead use link or navlink tags from react-router library<br>
+**Difference between a_tag , link element , navlink element**
+<br>
+a_tag will simply open a new page , hence full page will get refreshed instead use link or navlink tags from react-router library<br>
 
 note that the difference between navlink and react is that navlink adds active class to the link that matches with the selected link , so for example if selected link= /products then the links that matches this are / and /products so both of them will have class = active too , but if you want exact match then write 'end' at the end. Also you need to define .active css property in css file other wise no visual changes would be there.
 
@@ -249,6 +250,16 @@ note that the difference between navlink and react is that navlink adds active c
 
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/074d6bad-4b6e-40ad-bff1-beb7c7947d49)
 
-notice instead of href we are using to='/products'
+notice instead of href='' we are using to='/products'
+
+### useNavigate hook and Navigate element
+
+useNavigate is used to redirct to a particular route . Here's an example
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/c6f2af5b-fccd-426d-992b-8855da51cbde)
+
+Navigate element is used as , but first import navigate from react-router-dom library:
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/27d4edce-bc19-4e1f-866f-d87bb799c085)
+
 
 
