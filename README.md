@@ -106,7 +106,7 @@ When writing JSX in React, there are a few rules to keep in mind to ensure that 
    To embed JavaScript expressions or variables within JSX, enclose them in curly braces `{}`. For example, `<h1>Hello, {name}!</h1>` allows you to insert the value of the `name` variable into the JSX output. You can include any valid JavaScript expression within the curly braces.
 
 3. Use a Single Root Element:
-   JSX expressions must have a single root element. This means that you should wrap multiple elements within a single parent element. For example, instead of writing:
+   JSX expressions must have a `single root element`. This means that you should wrap multiple elements within a single parent element. For example, instead of writing:
    ```jsx
    <h1>Hello</h1>
    <p>Paragraph</p>
@@ -124,15 +124,16 @@ When writing JSX in React, there are a few rules to keep in mind to ensure that 
 **props in react**<br>
 
 when you want to pass information from one component to other we use props , you can pass the info as parameters example:
-
+```
 <Header text1="dash dash" text2="blah blah" />
+```
 here the react functional component will have 2 props , which u can access by props.text1 , props.text2.
 
-note: when you have dynamic value then don't pass the value as it is instead use {} so for example <Header tasklist={task} />
+note: when you have dynamic value then don't pass the value as it is instead use {} so for example `<Header tasklist={task} />`
 
 ### User Input , Events and UseRef
 
-side note: when you write html code inside javascript you mostly write arr.map(()=>( <p>  </p> ) ) basically ()=>() instead of ()=>{} , you can write ()=> {} but here you would have to write ()=>{return( html_code )} .<br>
+side note: when you write html code inside javascript you mostly write `arr.map(()=>( <p>  </p> ) )` basically ()=>() instead of ()=>{} , you can write ()=> {} but here you would have to write `()=>{return( html_code )}` .<br>
 
 this is what we want to create
 
