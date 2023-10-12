@@ -213,7 +213,7 @@ json-server --watch db.json --port 3004
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/f0554b92-e517-4491-88e6-936c77cfed99)
 
 <br>
-note: do not do this as this will be an infinite loop (setProduct is a state change func)
+note: do not do this as this will be an infinite loop (setProduct is a state change func) , so since after the state changes(while fetching) the page will re-render due to which fetch will be called again and this process will keep on continuing till infinity.
 
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/3640cd10-bf70-4a3e-8d53-7e7f43f6dfb8)
 
@@ -224,7 +224,9 @@ if you want to make it run once , you need to use useEffect because it runs only
 **UseEffect**
 
 There are 2 cases for useEffect
-i) useEffect runs once when passed [] empty array as second argument <br>
+<br>
+i) useEffect runs once when passed [] empty array as second argument 
+<br>
 ii) and will be called everytime when [dependency] state is changed .
 
 ![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/e1e1666a-ee98-4846-9652-2e430400d45f)
