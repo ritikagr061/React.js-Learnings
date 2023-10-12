@@ -223,12 +223,16 @@ if you want to make it run once , you need to use useEffect because it runs only
 
 **UseEffect**
 
-useEffect runs once when passed [] empty array as second argument , and will be called when [dependency] state is changed .
+There are 2 cases for useEffect
+i) useEffect runs once when passed [] empty array as second argument <br>
+ii) and will be called everytime when [dependency] state is changed .
+
+![image](https://github.com/ritikagr061/React.js-Learnings/assets/54122273/e1e1666a-ee98-4846-9652-2e430400d45f)
+<br>
+note that you should never change the value of the variable(inside the usEffect function) you have dependency on , otherwise this will go on an infinite loop.
 
 ReactStrict mode : when in development phase we use ReactStrict mode which renders every element twice hence when in production remove the strict mode of react.
 <br>
-
-
 
 
 ## React Router
