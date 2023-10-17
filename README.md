@@ -237,6 +237,46 @@ ReactStrict mode : when in development phase we use ReactStrict mode which rende
 <br>
 
 
+## useMemo
+
+useMemo is a React Hook that lets you cache the result of a calculation between re-renders.
+<br><br>
+If you want to understand the usage then here's the answer
+<br>
+suppose this is the code logic
+```
+const[var , setVar ] = useState(0);
+const[check ,setCheck ] = useState(true);
+
+function calc(){
+  if(check)
+  //some heavy calculation
+  else
+  //some heavy calc.
+  return val;
+}
+
+return(
+  <>
+    <button onClick={()=>(setVar(var+1))} > Change Var </button>
+    <p> {calc()} </p>
+  </>
+)
+```
+<br>
+Now every time the button is clicked state changes and the component rerenders and while re-rendering calc() is evaluated everytime so to make our code more efficient.
+we can use useMemo.
+<br>
+By logic calc value won't change if value of check doesn't change hence its dependcy is only on check and therefore this function should evaluate only when the value check changes.
+Otherwise wile re-rendering it should return the memoized value. Which is where useMemo comes into picture .
+
+** Usage: **
+<br>
+const calc = useMemo( ()=>{ define the function return val; } , [calc] )
+<br>
+so just like in useEffect first part is a function second part is dependency.
+
+
 ## React Router
 
 you need to import {browserRouter} from react-router-dom library , and close this around <App/> , this needs to be done in index.js
